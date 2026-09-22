@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukáš Horák</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="lang-switch">
+        Jazyk: <a href="index.html" class="active">CZ</a> | <a href="en.html">EN</a>
+    </div>
+
+    <img src="bi-flag.png" alt="Bisexual Flag" class="bi-flag" onerror="this.onerror=null; this.src='https://placehold.co/800x180/d62976/ffffff?text=bi-flag.png';">
+
+    <div class="container">
+
+        <h1>Bisexuální</h1>
+        <h2>Až skoro Gay.</h2>
+
+        <div class="text-with-image">
+            <p>Ano, já <strong>Lukáš Horák</strong> jsem Bisexuální, doufám že tuto informaci nebudeš zneužívat :3 Díky moc, že to bereš v pohodě!</p>
+            <img src="bikisser.png" alt="bikisser" class="bikisser-img" onerror="this.onerror=null; this.src='https://placehold.co/130x130/ffffff/000000?text=bikisser.png';">
+        </div>
+
+        <div class="relationship-box">
+            <b>Mám kluka kterého hluboce miluji :3</b><br>
+            <div class="timer" id="timer">Načítám čas...</div>
+        </div>
+
+        <h3>Statistiky</h3>
+        <table>
+            <tr>
+                <th>Jméno</th>
+                <td>Lukáš Horák</td>
+            </tr>
+            <tr>
+                <th>Narozen</th>
+                <td>08.01.2011</td>
+            </tr>
+            <tr>
+                <th>Orientace</th>
+                <td>Bisexuální (Male pref)</td>
+            </tr>
+            <tr>
+                <th>Šance že ti vezmu kluka</th>
+                <td>99 %</td>
+            </tr>
+            <tr>
+                <th>Level roztomilosti</th>
+                <td>100/10</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p>Lukáš Horák</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const startDate = new Date(2026, 5, 14, 1, 0, 0); // 14. Června 2026 01:00:00
+
+        function updateTimer() {
+            const now = new Date();
+            let diff = now - startDate;
+
+            if (diff < 0) {
+                diff = Math.abs(diff);
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("timer").innerText = 
+                days + " dní, " + hours + " hod, " + minutes + " min, " + seconds + " sek";
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
